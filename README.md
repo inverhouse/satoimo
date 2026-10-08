@@ -11,7 +11,7 @@
 
 ## ダウンロード（GitHub Releases）
 
-配布版は今後公開予定です。公開後は [GitHub Releases](https://github.com/inverhouse/satoimo/releases) から、お使いの OS 向けのファイルを入手してください。対応予定の配布形式は Windows（x64）のインストーラーと macOS の DMG です。各版の変更点や利用時の注意事項も Release ページに掲載します。
+Windows（x64）版のインストーラーは [GitHub Releases](https://github.com/inverhouse/satoimo/releases) からダウンロードできます。macOS 版の DMG は今後公開予定です。変更点や利用時の注意事項は各 Release ページに掲載します。
 
 ## 使い方
 
