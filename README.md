@@ -11,7 +11,7 @@
 
 ## ダウンロード（GitHub Releases）
 
-Windows（x64）版のインストーラーは [GitHub Releases](https://github.com/inverhouse/satoimo/releases) からダウンロードできます。macOS 版の DMG は今後公開予定です。変更点や利用時の注意事項は各 Release ページに掲載します。
+Windows（x64）版のインストーラーと macOS（Apple Silicon）版の DMG は [GitHub Releases](https://github.com/inverhouse/satoimo/releases) からダウンロードできます。Windows 版は v0.1.0、macOS 版は v0.1.1 を利用してください。変更点や初回起動時の許可手順は各 Release ページに掲載します。
 
 ## 使い方
 
@@ -38,7 +38,7 @@ Windows（x64）版のインストーラーは [GitHub Releases](https://github.
 2. `sh scripts/build-ffmpeg-macos.sh` で FFmpeg をビルドします。
 3. `npx tauri dev` で開発実行、`npx tauri build` で DMG を作成します。出力先は `src-tauri/target/release/bundle/dmg/` です。
 
-macOS の最小対応バージョンは 11.0 です。配布時にはアプリの署名と公証も確認してください。
+macOS の最小対応バージョンは 11.0 です。アプリ全体と同梱 FFmpeg は仮署名（`signingIdentity: "-"`）します。Developer ID による署名と Apple の公証は行わないため、ダウンロード後の初回起動時には「システム設定 → プライバシーとセキュリティ → このまま開く」で許可が必要になる場合があります。
 
 ### テスト
 
