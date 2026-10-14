@@ -12,7 +12,8 @@ curl -fsSLO "https://ffmpeg.org/releases/ffmpeg-$VER.tar.xz"
 tar xf "ffmpeg-$VER.tar.xz"
 cd "ffmpeg-$VER"
 # No --enable-gpl / --enable-nonfree => LGPL v2.1+. Only what satoimo uses is enabled.
-./configure --disable-gpl --disable-nonfree --disable-doc --disable-ffplay --disable-ffprobe \
+# Disable autodetection so the bundle does not depend on Homebrew libraries.
+./configure --disable-autodetect --enable-zlib --disable-gpl --disable-nonfree --disable-doc --disable-ffplay --disable-ffprobe \
   --disable-network --disable-debug --enable-videotoolbox --enable-audiotoolbox \
   --extra-cflags="-mmacosx-version-min=11.0" --extra-ldflags="-mmacosx-version-min=11.0"
 make -j"$(sysctl -n hw.ncpu)"
